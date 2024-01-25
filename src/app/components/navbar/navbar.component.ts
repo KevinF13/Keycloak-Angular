@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JwksValidationHandler, OAuthService } from 'angular-oauth2-oidc';
 import { authCodeFlowConfig } from 'src/app/sso-config';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,10 @@ export class NavbarComponent implements OnInit{
   
   name: string = "";
 
-  constructor(private oauthService: OAuthService){};
+  constructor(private oauthService: OAuthService,
+    private titulo: Title){
+      titulo.setTitle("Cotopaxi Tour")
+    };
 
   ngOnInit(): void{
   this.configureSingleSignOn();

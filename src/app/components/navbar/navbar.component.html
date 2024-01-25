@@ -7,15 +7,18 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li *ngIf="token" class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/home">HomePage</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li >
+          <a class="navbar-brand" style="font-family: 'Times', sans-serif; font-weight: lighter; color: white;">{{name}}</a> <!-- Cambié la fuente y el color del texto -->
+        </li>
         <li *ngIf="!token" class="nav-item">
-          <a role="button" class="nav-link" (click)="login()">Login</a>
+          <a role="button" class="nav-link" (click)="login()">Iniciar Sesión</a>
         </li>
         <li *ngIf="token" class="nav-item">
-          <a  role="button" class="nav-link" (click)="logout()">Logout</a>
+          <a  role="button" class="nav-link" (click)="logout()">Cerrar Sesión</a>
         </li>
       </ul>
     </div>
