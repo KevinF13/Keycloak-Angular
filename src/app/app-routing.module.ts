@@ -5,7 +5,7 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path: "home", component: HomeComponent, canActivate: [AuthGuard]},
+  {path: "home", component: HomeComponent},
   {path: "welcome", component: WelcomeComponent},
   {path: "", redirectTo: "welcome", pathMatch: "full"},
   {path: "**", redirectTo: "welcome", pathMatch: "full"}
